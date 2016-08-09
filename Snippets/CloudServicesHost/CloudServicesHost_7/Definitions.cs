@@ -1,11 +1,10 @@
 ﻿using NServiceBus.Persistence;
 using NServiceBus.Settings;
-using NServiceBus.Transports;
+using NServiceBus.Transport;
 
-public class AzureStorageQueueTransport :
-    TransportDefinition
+public class AzureStorageQueueTransport : TransportDefinition
 {
-    protected override TransportInfrastructure Initialize(SettingsHolder settings, string connectionString)
+    public override TransportInfrastructure Initialize(SettingsHolder settings, string connectionString)
     {
         throw new System.NotImplementedException();
     }
@@ -15,10 +14,10 @@ public class AzureStorageQueueTransport :
         get { throw new System.NotImplementedException(); }
     }
 }
-public class AzureServiceBusTransport :
-    TransportDefinition
+
+public class AzureServiceBusTransport : TransportDefinition
 {
-    protected override TransportInfrastructure Initialize(SettingsHolder settings, string connectionString)
+    public override TransportInfrastructure Initialize(SettingsHolder settings, string connectionString)
     {
         throw new System.NotImplementedException();
     }
@@ -28,7 +27,7 @@ public class AzureServiceBusTransport :
         get { throw new System.NotImplementedException(); }
     }
 }
-public class AzureStoragePersistence :
-    PersistenceDefinition
+
+public class AzureStoragePersistence : PersistenceDefinition
 {
 }
